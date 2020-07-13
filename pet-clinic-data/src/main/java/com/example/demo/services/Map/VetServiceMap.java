@@ -1,12 +1,12 @@
 package com.example.demo.services.Map;
 
 import com.example.demo.model.Vet;
-import com.example.demo.services.CrudService;
+import com.example.demo.services.VetService;
 import com.sun.xml.bind.v2.model.core.ID;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet,Long> implements CrudService<Vet,Long> {
+public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
