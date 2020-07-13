@@ -3,9 +3,10 @@ package com.example.demo.services.Map;
 import com.example.demo.model.Pet;
 import com.example.demo.services.PetService;
 import com.sun.xml.bind.v2.model.core.ID;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class PetServiceMap extends AbstractMapService<Pet,Long> implements PetService {
 
     @Override
