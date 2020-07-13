@@ -3,9 +3,10 @@ package com.example.demo.services.Map;
 import com.example.demo.model.Owner;
 import com.example.demo.services.OwnerService;
 import com.sun.xml.bind.v2.model.core.ID;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {

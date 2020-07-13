@@ -2,8 +2,6 @@ package com.example.demo.BootStrap;
 
 import com.example.demo.model.Owner;
 import com.example.demo.model.Vet;
-import com.example.demo.services.Map.OwnerServiceMap;
-import com.example.demo.services.Map.VetServiceMap;
 import com.example.demo.services.OwnerService;
 import com.example.demo.services.VetService;
 import org.springframework.boot.CommandLineRunner;
@@ -15,9 +13,9 @@ public class DataLoader  implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService=new OwnerServiceMap();
-        vetService=new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
