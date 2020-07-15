@@ -1,8 +1,6 @@
 package com.example.demo.BootStrap;
 
-import com.example.demo.model.Owner;
-import com.example.demo.model.PetType;
-import com.example.demo.model.Vet;
+import com.example.demo.model.*;
 import com.example.demo.services.OwnerService;
 import com.example.demo.services.PetTypeService;
 import com.example.demo.services.VetService;
@@ -36,12 +34,32 @@ public class DataLoader  implements CommandLineRunner {
         Owner owner1=new Owner();
         owner1.setFirstName("Mi Mi");
         owner1.setLastName("Lwin");
+        owner1.setAddress("Yangon");
+        owner1.setCity("Mayangone");
+        owner1.setTelephone("0999999999");
         ownerService.save(owner1);
+
+        Pet pet=new Pet();
+        pet.setPetType(petTypeDog);
+        pet.setOwner(owner1);
+        pet.setBirthDate(LocalDate.now());
+        pet.setName("Rosco");
+        owner1.getPetSet().add(pet);
 
         Owner owner2=new Owner();
         owner2.setFirstName("Mu Mo");
         owner2.setLastName("Lwin");
+        owner2.setAddress("Mandalay");
+        owner2.setCity("nyanung");
+        owner2.setTelephone("090000");
         ownerService.save(owner2);
+
+        Pet pet2=new Pet();
+        pet.setPetType(petTypeCat);
+        pet.setOwner(owner2);
+        pet.setBirthDate(LocalDate.now());
+        pet.setName("Coco");
+        owner1.getPetSet().add(pet2);
 
         System.out.println("Loading Owner Service Save------------");
 
