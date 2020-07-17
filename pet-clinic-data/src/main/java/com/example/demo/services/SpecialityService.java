@@ -4,7 +4,7 @@ import com.example.demo.model.Speciality;
 
 import java.util.Set;
 
-public interface SpecialitiesService extends CrudService<Speciality,Long> {
+public interface SpecialityService extends CrudService<Speciality,Long> {
 
     @Override
     default Set<Speciality> findAll() {
