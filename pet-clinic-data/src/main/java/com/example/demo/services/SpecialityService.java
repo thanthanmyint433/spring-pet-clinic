@@ -6,7 +6,7 @@ import java.util.Set;
 
 public interface SpecialityService extends CrudService<Speciality,Long> {
 
-    @Override
+   /* @Override
     default Set<Speciality> findAll() {
         return null;
     }
@@ -29,5 +29,5 @@ public interface SpecialityService extends CrudService<Speciality,Long> {
     @Override
     default void deleteById(Long aLong) {
 
-    }
+    }*/
 }

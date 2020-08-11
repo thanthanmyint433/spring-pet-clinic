@@ -46,6 +46,12 @@ public class OwnerSpringDataService implements OwnerService {
 
     @Override
     public Owner save(Owner object) {
+        System.out.println("######################");
+        System.out.println("######################");
+        System.out.println("######################");
+        System.out.println("######################");
+        System.out.println("######################");
+        System.out.println("######################");
         return ownerRepository.save(object);
     }
 
