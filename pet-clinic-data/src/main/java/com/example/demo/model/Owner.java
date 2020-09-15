@@ -9,18 +9,22 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 //@AllArgsConstructor
-@Builder
+//@Builder
 @Entity
 @Table(name = "owner")
 public class Owner extends Person {
     @Builder
-    public Owner(Long id,String firstName,String lastName,String address, String city, String telephone, Set<Pet> petSet) {
-       super(id,firstName,lastName);
+    public Owner(Long id, String firstName, String lastName, String address, String city, String telephone, Set<Pet> pets) {
+        super(id, firstName, lastName);
         this.address = address;
         this.city = city;
         this.telephone = telephone;
-        this.petSet = petSet;
+
+        if(pets != null) {
+            this.petSet = pets;
+        }
     }
+
 
     @Column(name = "address")
     private String address;
